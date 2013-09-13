@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('previewAllTheIcons.comApp'));
+  beforeEach(module('previewAllTheIcons'));
 
   var MainCtrl,
     scope;

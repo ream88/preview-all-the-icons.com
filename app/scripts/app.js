@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('previewAllTheIcons.comApp', [])
+angular.module('previewAllTheIcons', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
