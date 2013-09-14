@@ -313,8 +313,27 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+    listfiles: {
+      options: {
+        banner: '[',
+        footer: ']',
+        eol: 'crlf',
+        prefix: '  "',
+        postfix: '",',
+        postfixLastLine: '"'
+      },
+      test1: {
+        files: {
+          'app/json/ios7.json': [
+            'app/images/iOS7/*.png',
+          ]
+        }
+      }
     }
   });
+
+  grunt.loadNpmTasks('grunt-listfiles');
 
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
@@ -322,6 +341,7 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
+      'listfiles',
       'clean:server',
       'concurrent:server',
       'autoprefixer',
@@ -340,6 +360,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'listfiles',
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
