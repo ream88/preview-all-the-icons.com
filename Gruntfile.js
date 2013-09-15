@@ -321,7 +321,8 @@ module.exports = function (grunt) {
         eol: 'crlf',
         prefix: '  "',
         postfix: '",',
-        postfixLastLine: '"'
+        postfixLastLine: '"',
+        modify: 'f.replace("app/", "")'
       },
       test1: {
         files: {

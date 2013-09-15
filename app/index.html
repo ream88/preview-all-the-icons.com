@@ -15,13 +15,11 @@
   <body ng-controller="MainCtrl">
     <div class="container">
       <div class="hero-unit">
-        <h1>'Allo, 'Allo!</h1>
-        <p>You now have</p>
         <ul>
-            <li ng-repeat="wallpaper in wallpapers">{{wallpaper}}</li>
+          <li class="wallpaper" ng-repeat="wallpaper in wallpapers">
+            <img ng-src="{{wallpaper}}" />
+          </li>
         </ul>
-        <p>installed.</p>
-        <h3>Enjoy coding! - Yeoman</h3>
       </div>
     </div>
 
